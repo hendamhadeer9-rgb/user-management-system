@@ -1,0 +1,28 @@
+.login-container{
+    background: linear-gradient(to right,rgba(254,175,0,0.9),rgba(254,175,0,0.5));
+}
+.title-color{
+    border-left : 6px solid #FFC107;
+}
+
+
+.sidebar-container .ps-sidebar-root{
+    background-color: #F8D442;
+    height: 100vh;
+
+}
+
+.sidebar-container .ps-menu-button:hover{
+    background-color: #FEAF00 !important;
+    border-radius: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.sidebar-container{
+    height: 100vh; 
+  position: sticky; 
+  top: 0; 
+  left: 0;
+  display: flex;
+  z-index: 1000;
+}
