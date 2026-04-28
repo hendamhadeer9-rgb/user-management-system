@@ -21,11 +21,14 @@ export let AuthContext = createContext<AuthContextType | null>(null);
 
 export default function AuthContextProvider(props:PropsWithChildren){
     let [loginData,setLoginData] =useState<UserData | null>(null);
-    const saveLoginData = ()=>{
-     let encodedToken = localStorage.getItem('token');
-     let decodedToken = jwtDecode(encodedToken);
-     setLoginData(decodedToken)
+    const saveLoginData = () => {
+    let encodedToken = localStorage.getItem('token');
+    
+    if (encodedToken) {
+      let decodedToken: any = jwtDecode(encodedToken);
+      setLoginData(decodedToken);
     }
+  }
     useEffect(()=>{
         if(localStorage.getItem('token')){
             saveLoginData()
